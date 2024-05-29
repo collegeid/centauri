@@ -89,6 +89,74 @@ Parameter Specifications
  - Borrowing is done based on the `Nomor Inventaris Barang`
  - check the status of the item whether it is `tersedia` or currently `dipinjam`
  - record who the borrower is, the borrowing date with a maximum return period of 7 days
+   
+#### Borrow Equipment
+ - User Side
+ - Borrowing is done based on the `Nomor Inventaris Barang`
+ - check the status of the item whether it is `tersedia` or currently `dipinjam`
+ - record who the borrower is (in this case, visitor's account), the borrowing date with a maximum return period of 7 days
+
+#### Return Equipment
+- Returning equipment based on inventory number
+- Calculate the late fee per day which is 10,000 rupiah
+
+#### Track Equipment
+- Tracking an Equipment based on `Nomor Inventaris`, and show it's `Sisa Waktu Peminjaman`
+
+#### History
+
+ - borrowing history with `level akses admin`
+ - view personal borrowing `level admin`
+ - borrowing of all members, by searching for members based on `nama`
+ - If the level is `pengunjung`, it will display borrowed items based on the account owner currently in use
+
+#### Equipment Management
+ - admin level management access to add a projector with parameters `nama_alat, deksripsi, nomor_inventaris`
+ - delete projector based on `nomor_inventaris`
+ - change equipment information based on `nomor_inventaris`
+
+#### Account Management
+ - add `profil` and `akun`
+ - delete `akun` based on `username`
+ - modify `akun` based on `username`
+ - view `akun` based on `username`
+
+#### main()
+
+- Initialize `software_name`
+- Display Main Page
+  - Login
+  - Register
+  - Exit
+
+- Visitor
+   1. Search and List Electronic Equipment
+   2. Electronic Equipment Availability Status
+   3. Borrowing History (Personal Account)
+   4. Logout
+   5. Exit
 
 
-##By Centauri - 29, May 2024 (febrian.id)
+- Staff
+  1. Search and List Electronic Equipment
+  2. Borrow Electronic Equipment (For Visitors)
+  3. Return Electronic Equipment
+  4. Electronic Equipment Availability Status
+  5. Borrowing History (Search History by User Name)
+  6. Logout
+  7. Exit
+
+- Admin
+  1. Search and List Electronic Equipment
+  2. Borrow Electronic Equipment (For Visitors)
+  3. Return Electronic Equipment
+  4. Electronic Equipment Availability Status
+  5. Borrowing History (Search History by User)
+  6. Electronic Equipment Data Management
+  7. Account Management
+  8. Logout
+  9. Exit
+
+<hr>
+
+## By Centauri - 29, May 2024 (febrian.id)
