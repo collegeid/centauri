@@ -1,5 +1,11 @@
 # Centauri App - One Week Project
 
+## Preview
+
+<iframe src="[https://nbviewer.jupyter.org/url/path/to/your/notebook.ipynb](https://nbviewer.jupyter.org/url/path/to/your/notebook.ipynb](https://notebooks.githubusercontent.com/view/ipynb?browser=firefox&bypass_fastly=true&color_mode=auto&commit=d189790f89ddd1cb0f9615955ec53404b1221f99&device=unknown_device&docs_host=https%3A%2F%2Fdocs.github.com&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f636f6c6c65676569642f63656e74617572692f643138393739306638396464643163623066393631353935356563353334303462313232316639392f43656e74617572695f417070735f4f6e655f5765656b5f50726f6a6563742e6970796e62&logged_in=true&nwo=collegeid%2Fcentauri&path=Centauri_Apps_One_Week_Project.ipynb&platform=linux&repository_id=807648343&repository_type=Repository&version=126#7b5783be-4864-40ce-90bc-d65dea69ff2f)" width="100%" height="600"></iframe>
+
+[Link to Notebook]([https://nbviewer.jupyter.org/url/path/to/your/notebook.ipynb](https://notebooks.githubusercontent.com/view/ipynb?browser=firefox&bypass_fastly=true&color_mode=auto&commit=d189790f89ddd1cb0f9615955ec53404b1221f99&device=unknown_device&docs_host=https%3A%2F%2Fdocs.github.com&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f636f6c6c65676569642f63656e74617572692f643138393739306638396464643163623066393631353935356563353334303462313232316639392f43656e74617572695f417070735f4f6e655f5765656b5f50726f6a6563742e6970796e62&logged_in=true&nwo=collegeid%2Fcentauri&path=Centauri_Apps_One_Week_Project.ipynb&platform=linux&repository_id=807648343&repository_type=Repository&version=126#7b5783be-4864-40ce-90bc-d65dea69ff2f))
+
 ## Features of Electronic Equipment Borrowing System:
 
 1. **Software Name Initialization**
