@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\begin{document}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm]
+
+    \node (start) [startstop] {Manajemen Akun};
+    \node (in1) [io, below of=start, yshift=-0.5cm] {Pilihan (1-4)};
+    \node (dec1) [decision, below of=in1, yshift=-1cm] {Pilihan == '1'};
+    \node (dec2) [decision, below of=dec1, yshift=-1.8cm] {Pilihan == '2'};
+    \node (dec3) [decision, below of=dec2, yshift=-1.8cm] {Pilihan == '3'};
+    \node (dec4) [decision, below of=dec3, yshift=-1.8cm] {Pilihan == '4'};
+    \node (invalid) [startstop, below of=dec4, yshift=-1cm] {Pilihan tidak valid};
+    \node (pro1) [process, right of=dec1, xshift=2.5cm] {Tambah Akun};
+    \node (pro2) [process, right of=dec2, xshift=2.5cm] {Hapus Akun};
+    \node (pro3) [process, right of=dec3, xshift=2.5cm] {Ubah Akun};
+    \node (pro4) [process, right of=dec4, xshift=2.5cm] {Lihat Profil};
+    \node (out1) [io, right of=pro1, xshift=2.5cm] {Success/Fail};
+    \node (out2) [io, right of=pro2, xshift=2.5cm] {Empty/Success};
+    \node (out3) [io, right of=pro3, xshift=2.5cm] {Empty/Success};
+    \node (out4) [io, right of=pro4, xshift=2.5cm] { (Akun/Empty)};
+    \node (stop) [startstop, right of=invalid, xshift=10.5cm, yshift=-3.2cm] {Selesai};
+
+    \draw [arrow] (start) -- (in1);
+    \draw [arrow] (in1) -- (dec1);
+    \draw [arrow] (dec1) -- node[anchor=south] {yes} (pro1);
+    \draw [arrow] (dec1.east) -- ++(0.8,0) |- node[anchor=south,pos=0.25] {no} (dec2.east);
+    \draw [arrow] (dec2) -- node[anchor=south] {yes} (pro2);
+    \draw [arrow] (dec2.east) -- ++(0.8,0) |- node[anchor=south,pos=0.25] {no} (dec3.east);
+    \draw [arrow] (dec3) -- node[anchor=south] {yes} (pro3);
+    \draw [arrow] (dec3.east) -- ++(0.8,0) |- node[anchor=south,pos=0.25] {no} (dec4.east);
+    \draw [arrow] (dec4) -- node[anchor=south] {yes} (pro4);
+    \draw [arrow] (dec4.east) -- ++(0.8,0) |- node[anchor=south,pos=0.25] {no} (invalid.east);
+
+    \draw [arrow] (pro1) -- (out1);
+    \draw [arrow] (pro2) -- (out2);
+    \draw [arrow] (pro3) -- (out3);
+    \draw [arrow] (pro4) -- (out4);
+
+    \draw [arrow] (out1.east) -- ++(0.5,0) |- ++(0,-2) -| (stop);
+    \draw [arrow] (out2.east) -- ++(0.5,0) |- ++(0,-1.3) -| (stop);
+    \draw [arrow] (out3.east) -- ++(0.5,0) |- ++(0,-0.6) -| (stop);
+    \draw [arrow] (out4.east) -- ++(0.5,0) |- (stop);
+    \draw [arrow] (invalid.east) -- ++(0.5,0) |- ++(0,-0.3) -| (stop);
+
+    \end{tikzpicture}
+
+\end{figure}
+
+\end{document}

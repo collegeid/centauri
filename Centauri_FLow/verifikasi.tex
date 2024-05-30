@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\begin{document}
+
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (input) {Masukkan \\ Username dan Password};
+    \node [decision, below of=input] (check) {Cek keanggotaan};
+    \node [block, below of=check, node distance=3cm] (return) {Kembali \\ Halaman Akses};
+    \node [cloud, right of=check, node distance=5cm] (error) {Username/Password Salah};
+    % Draw edges
+    \path [line] (input) -- (check);
+    \path [line] (check) -- node {Ya} (return);
+    \path [line] (check) -- node {Tidak} (error);
+    \path [line,dashed] (error) |- (input);
+\end{tikzpicture}
+
+\end{document}
