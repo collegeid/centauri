@@ -274,7 +274,7 @@ def status_alat():
  - riwayat peminjaman dengan `level akses admin`
  - melihat peminjaman pribadi `level admin`
  - peminjaman seluruh anggota, dengan mencari anggota berdasarkan `nama`
- - Jika level `pengunjung`, akan menampilkan buku yang di pinjam berdasarkan pemilik akun yang sedang di gunakan
+ - Jika level `pengunjung`, akan menampilkan alat yang di pinjam berdasarkan pemilik akun yang sedang di gunakan
 
 """
 
@@ -516,7 +516,7 @@ def main():
                     print("Pilihan tidak valid. Silakan coba lagi.")
             elif user['level'] == 'pengunjung':
                 print("1. Cari dan Daftar Alat Elektronik")
-                print("2. Pinjam Buku")
+                print("2. Pinjam Alat")
                 print("3. Status Ketersediaan Alat Elektronik")
                 print("4. Riwayat Peminjaman")
                 print("4. Logout")
